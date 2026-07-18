@@ -8,7 +8,8 @@ on:
 jobs:
   web-deploy:
     runs-on: ubuntu-latest
-    environment: github-pages
+    # Agar aapne Secrets 'Repository secrets' mein dale hain, 
+    # to yahan se 'environment: github-pages' hata dena behtar hai.
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,4 +21,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/
-          security: passive
