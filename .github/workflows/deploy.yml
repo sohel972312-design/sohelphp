@@ -8,6 +8,7 @@ on:
 jobs:
   web-deploy:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
